@@ -42,11 +42,6 @@ services:
   node-exporter:
     image: prom/node-exporter:v1.8.2
     container_name: lab-node-exporter
-    command:
-      - "--path.rootfs=/host"
-    pid: host
-    volumes:
-      - /:/host:ro,rslave
     ports:
       - "9100:9100"
     restart: unless-stopped
