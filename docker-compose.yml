@@ -83,6 +83,8 @@ services:
     volumes:
       - ./aleación/config.alloy:/etc/alloy/config.alloy:ro
       - /var/run/docker.sock:/var/run/docker.sock:ro
+    group_add:
+      - "989"
     ports:
       - "12345:12345"
     depends_on:
